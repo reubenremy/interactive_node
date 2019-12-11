@@ -5,7 +5,12 @@ const readlineInterface = readline.createInterface({
     output: process.stdout
 })
 
-readlineInterface.question(`What's your name? :`, function(name) {
-    console.log(`Hi ${name}!`);
+readlineInterface.question(`Give me a number between 1 & 10? : `, function(number) {
+    multiplyByTwo(number);
     readlineInterface.close();
 })
+
+function multiplyByTwo(number) {
+    console.log('inside my multiplier function the number is', number);
+    return number * 2;
+}
