@@ -6,11 +6,10 @@ const readlineInterface = readline.createInterface({
 })
 
 readlineInterface.question(`Give me a number between 1 & 10? : `, function(number) {
-    multiplyByTwo(number);
+    console.log(multiplyByTwo(number));
     readlineInterface.close();
 })
 
 function multiplyByTwo(number) {
-    console.log('inside my multiplier function the number is', number);
     return number * 2;
 }
